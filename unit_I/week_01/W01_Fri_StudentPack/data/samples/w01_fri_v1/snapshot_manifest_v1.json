@@ -1,0 +1,32 @@
+{
+  "description": "Teaching snapshots, one season and circuit. Source retrieval is instructor QA, not student API access.",
+  "files": {
+    "results": {
+      "file": "monza_2021_results_v1.csv",
+      "rows": 20,
+      "sha256": "1da5e255696cd6d39e4a5f3414a8ce4939e508071c952c8d10ebda01da6e50a2",
+      "provenance": {
+        "origin": "JOLPICA_HTTP",
+        "api_access_confirmed": true,
+        "url": "https://api.jolpi.ca/ergast/f1/2021/circuits/monza/results/",
+        "pages": 1,
+        "total": 20,
+        "retrieved_utc": "2026-09-02T23:38:18.869961+00:00"
+      }
+    },
+    "laps": {
+      "file": "monza_2021_laps_v1.csv",
+      "rows": 892,
+      "sha256": "8f0b7a03b038324bd130b9e2f26046592e8ca75857725566b1ddf0cf324235e8",
+      "provenance": {
+        "origin": "FASTF1_SESSION",
+        "api_access_confirmed": "NOT VERIFIED: library may use cache",
+        "provider": "FastF1",
+        "session": "2021 Italy R",
+        "retrieved_utc": "2026-09-02T23:38:21.529134+00:00",
+        "telemetry_loaded": false,
+        "weather_loaded": false
+      }
+    }
+  }
+}

@@ -1,0 +1,7 @@
+# Observed working environment: Python 3.12.4, Windows, 2 September 2026.
+# Deliberate install only; never installed automatically by the notebook.
+pandas==2.3.1
+numpy==1.26.4
+requests==2.32.4
+fastf1==3.5.3
+ipykernel==6.30.0
