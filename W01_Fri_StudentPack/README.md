@@ -6,7 +6,7 @@
 | **Data mode** | **`snapshot`** (Monza 2021 teaching snapshot) |
 | **Seed** | `414` |
 | **Repository** | https://github.com/Bato21/AI-Workshop |
-| **Submitted commit** | `TBD` |
+| **Submitted commit** | [`aa8d2d5`](https://github.com/Bato21/AI-Workshop/commit/aa8d2d575282cf97a7ff6a892864615ff68d286f) — full hash `aa8d2d575282cf97a7ff6a892864615ff68d286f`. This is the content commit; the line you are reading was added by the follow-up commit that is the current `HEAD` of `main`. |
 | **AI-use record** | [`PROMPTS.md`](PROMPTS.md) |
 
 ## 1. Setup
