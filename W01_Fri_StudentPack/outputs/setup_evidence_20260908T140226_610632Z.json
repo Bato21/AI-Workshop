@@ -1,0 +1,67 @@
+{
+  "created_utc": "2026-09-08T14:02:26.610632+00:00",
+  "random_seed": 414,
+  "technical_status": "READY",
+  "student_status": "Ready",
+  "student_next_action": "Run tests and submit",
+  "health_checks": [
+    {
+      "check": "Python 3.10+",
+      "status": "PASS",
+      "evidence": "3.10.3 on Windows",
+      "next_action": "Install or activate Python 3.10+ and select that interpreter as the notebook kernel."
+    },
+    {
+      "check": "Jupyter kernel",
+      "status": "PASS",
+      "evidence": "Active shell: ZMQInteractiveShell",
+      "next_action": "Open this file in Jupyter or JupyterLab, select a Python kernel, and run this cell again."
+    },
+    {
+      "check": "Git available",
+      "status": "PASS",
+      "evidence": "git version 2.51.1.windows.1",
+      "next_action": "Install Git, restart Jupyter, and run this cell again. Do not paste credentials into this notebook."
+    }
+  ],
+  "package_checks": [
+    {
+      "package": "ipykernel",
+      "when_needed": "Needed today",
+      "available": true,
+      "version": "6.30.0",
+      "purpose": "Runs the selected Python notebook kernel."
+    },
+    {
+      "package": "numpy",
+      "when_needed": "Optional today",
+      "available": true,
+      "version": "1.26.4",
+      "purpose": "Useful later; the offline example below does not require it."
+    },
+    {
+      "package": "pandas",
+      "when_needed": "Prepare for Friday",
+      "available": true,
+      "version": "2.3.1",
+      "purpose": "Used for tabular F1 data work."
+    },
+    {
+      "package": "requests",
+      "when_needed": "Prepare for Friday",
+      "available": true,
+      "version": "2.32.4",
+      "purpose": "Useful for documented HTTP data access."
+    },
+    {
+      "package": "fastf1",
+      "when_needed": "Prepare for Friday",
+      "available": true,
+      "version": "3.5.3",
+      "purpose": "F1 data ecosystem session; not used today."
+    }
+  ],
+  "synthetic_sample_match": true,
+  "restart_and_run_all": "NOT CHECKED - complete this from a freshly restarted kernel.",
+  "privacy_note": "No tokens, usernames, email addresses, Git history, or personal paths are recorded."
+}

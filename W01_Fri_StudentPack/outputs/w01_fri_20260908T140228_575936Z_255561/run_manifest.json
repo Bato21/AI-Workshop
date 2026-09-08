@@ -1,0 +1,54 @@
+{
+  "session": "W01 Friday 2026-09-04",
+  "seed": 414,
+  "versions": {
+    "python": "3.10.3",
+    "seed": 414,
+    "git_available": true,
+    "numpy": "1.26.4",
+    "pandas": "2.3.1",
+    "requests": "2.32.4",
+    "fastf1": "3.5.3"
+  },
+  "provenance": {
+    "results": {
+      "origin": "PROVIDED_SNAPSHOT",
+      "api_access_confirmed": false,
+      "file": "monza_2021_results_v1.csv",
+      "sha256": "1da5e255696cd6d39e4a5f3414a8ce4939e508071c952c8d10ebda01da6e50a2",
+      "original_source": {
+        "origin": "JOLPICA_HTTP",
+        "api_access_confirmed": true,
+        "url": "https://api.jolpi.ca/ergast/f1/2021/circuits/monza/results/",
+        "pages": 1,
+        "total": 20,
+        "retrieved_utc": "2026-09-02T23:38:18.869961+00:00"
+      },
+      "previous_failures": []
+    },
+    "laps": {
+      "origin": "PROVIDED_SNAPSHOT",
+      "api_access_confirmed": false,
+      "file": "monza_2021_laps_v1.csv",
+      "sha256": "8f0b7a03b038324bd130b9e2f26046592e8ca75857725566b1ddf0cf324235e8",
+      "original_source": {
+        "origin": "FASTF1_SESSION",
+        "api_access_confirmed": "NOT VERIFIED: library may use cache",
+        "provider": "FastF1",
+        "session": "2021 Italy R",
+        "retrieved_utc": "2026-09-02T23:38:21.529134+00:00",
+        "telemetry_loaded": false,
+        "weather_loaded": false
+      },
+      "previous_failures": []
+    }
+  },
+  "files_sha256": {
+    "checks.csv": "0bf399ea2f1719a4f94e21e19388379c563d17eb225a30a40abf4a6c7ac7a44c",
+    "laps.csv": "8f0b7a03b038324bd130b9e2f26046592e8ca75857725566b1ddf0cf324235e8",
+    "results.csv": "1da5e255696cd6d39e4a5f3414a8ce4939e508071c952c8d10ebda01da6e50a2"
+  },
+  "created_utc": "2026-09-08T14:02:28.598022+00:00",
+  "student_interpretation": "NOT RECORDED BY AUTOMATION",
+  "student_restart_run_all": "NOT VERIFIED BY THIS CELL"
+}

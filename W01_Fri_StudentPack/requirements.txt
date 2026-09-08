@@ -1,0 +1,28 @@
+# IIT414W Lab 0 - dependencies for the SNAPSHOT route
+#
+# Versions below were read from the actual environment with
+# importlib.metadata.version(), not copied from the course handout.
+#
+# Environment observed: Python 3.10.3, Windows 10, 8 September 2026
+# Interpreter: .venv\Scripts\python.exe (venv built from C:\Python 310)
+# Kernel registered: "iit414w-w01" -> absolute interpreter path
+#
+# Deviation from requirements_w01_fri_v1.txt: that file documents Python
+# 3.12.4. No 3.12 interpreter exists on this machine, so the venv was built
+# on Python 3.10.3. All PACKAGE pins below match the course file exactly.
+
+# --- imported by the notebooks / helper on the snapshot route ---
+pandas==2.3.1          # helper: read_csv, DataFrame operations
+ipykernel==6.30.0      # runs the notebooks; also supplies IPython (Fri cell 4)
+
+# --- required, but not imported by lab code directly ---
+numpy==1.26.4          # transitive dependency of pandas; version is reported
+                       # by the helper's record_versions()
+
+# --- NOT used on the snapshot route; installed so that run_manifest.json
+# --- records real versions instead of "MISSING".
+# --- The helper imports these lazily, inside live-mode-only functions
+# --- (fetch_jolpica line 65, fetch_fastf1 line 98), which the snapshot
+# --- route never calls. Installing them demonstrates no network access.
+requests==2.32.4
+fastf1==3.5.3

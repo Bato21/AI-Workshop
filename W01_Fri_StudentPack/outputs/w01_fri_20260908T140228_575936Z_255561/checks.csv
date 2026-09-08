@@ -1,0 +1,8 @@
+check,status,observed
+Results are not empty,PASS,20
+Unique result keys,PASS,0
+Critical result fields present,PASS,0
+Nonnegative grid and positive classification,PASS,0
+Nonempty laps with unique keys,PASS,892 rows; 0 duplicate keys
+Missing lap times,REVIEW,"36; investigate, do not automatically drop"
+Grid zero,REVIEW,"2; special/unspecified start encoding, not P0"

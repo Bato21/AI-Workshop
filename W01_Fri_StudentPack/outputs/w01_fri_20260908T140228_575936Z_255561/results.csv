@@ -1,0 +1,21 @@
+season,round,circuit_id,driver_id,driver_number,constructor_id,grid,position,position_text,points,status
+2021,14,monza,ricciardo,3,mclaren,2,1,1,26,Finished
+2021,14,monza,norris,4,mclaren,3,2,2,18,Finished
+2021,14,monza,bottas,77,mercedes,19,3,3,15,Finished
+2021,14,monza,leclerc,16,ferrari,5,4,4,12,Finished
+2021,14,monza,perez,11,red_bull,8,5,5,10,Finished
+2021,14,monza,sainz,55,ferrari,6,6,6,8,Finished
+2021,14,monza,stroll,18,aston_martin,9,7,7,6,Finished
+2021,14,monza,alonso,14,alpine,10,8,8,4,Finished
+2021,14,monza,russell,63,williams,14,9,9,2,Finished
+2021,14,monza,ocon,31,alpine,12,10,10,1,Finished
+2021,14,monza,latifi,6,williams,13,11,11,0,Finished
+2021,14,monza,vettel,5,aston_martin,11,12,12,0,Finished
+2021,14,monza,giovinazzi,99,alfa,7,13,13,0,Finished
+2021,14,monza,kubica,88,alfa,17,14,14,0,Finished
+2021,14,monza,mick_schumacher,47,haas,18,15,15,0,Finished
+2021,14,monza,mazepin,9,haas,16,16,R,0,Power Unit
+2021,14,monza,hamilton,44,mercedes,4,17,R,0,Collision
+2021,14,monza,max_verstappen,33,red_bull,1,18,R,0,Collision
+2021,14,monza,gasly,10,alphatauri,0,19,R,0,Suspension
+2021,14,monza,tsunoda,22,alphatauri,0,20,W,0,Brakes

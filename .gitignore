@@ -1,0 +1,20 @@
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+
+# Jupyter
+.ipynb_checkpoints/
+
+# FastF1 cache — regenerated on demand, never part of the submission
+W01_Fri_StudentPack/data/cache/
+
+# Local tooling
+.claude/
+
+# Scratch file holding the commit message; not part of the deliverable
+mensaje_commit.txt
