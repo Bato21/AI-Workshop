@@ -1,0 +1,171 @@
+{
+  "file": "results_2019_2021_v1.csv",
+  "rows": 1200,
+  "columns": [
+    "season",
+    "round",
+    "race_name",
+    "circuit_id",
+    "race_date",
+    "driver_id",
+    "driver_name",
+    "constructor_id",
+    "grid",
+    "position",
+    "position_text",
+    "status",
+    "points",
+    "laps"
+  ],
+  "sha256": "7da03caf06da97109acd67eda15bff9105f0fd2f086b03d2ed2227d1f5e7dbbe",
+  "provenance": "JOLPICA_PROVIDED_SNAPSHOT",
+  "source_urls": [
+    "https://api.jolpi.ca/ergast/f1/2019/results/?limit=100&offset=0",
+    "https://api.jolpi.ca/ergast/f1/2019/results/?limit=100&offset=100",
+    "https://api.jolpi.ca/ergast/f1/2019/results/?limit=100&offset=200",
+    "https://api.jolpi.ca/ergast/f1/2019/results/?limit=100&offset=300",
+    "https://api.jolpi.ca/ergast/f1/2019/results/?limit=100&offset=400",
+    "https://api.jolpi.ca/ergast/f1/2020/results/?limit=100&offset=0",
+    "https://api.jolpi.ca/ergast/f1/2020/results/?limit=100&offset=100",
+    "https://api.jolpi.ca/ergast/f1/2020/results/?limit=100&offset=200",
+    "https://api.jolpi.ca/ergast/f1/2020/results/?limit=100&offset=300",
+    "https://api.jolpi.ca/ergast/f1/2021/results/?limit=100&offset=0",
+    "https://api.jolpi.ca/ergast/f1/2021/results/?limit=100&offset=100",
+    "https://api.jolpi.ca/ergast/f1/2021/results/?limit=100&offset=200",
+    "https://api.jolpi.ca/ergast/f1/2021/results/?limit=100&offset=300",
+    "https://api.jolpi.ca/ergast/f1/2021/results/?limit=100&offset=400"
+  ],
+  "transformation": "Flatten race and driver records; preserve missing Q1/Q2/Q3 as empty CSV fields. No filtering or imputation.",
+  "created_at_utc": "2026-09-10T01:40:05.153908+00:00",
+  "derivation": "Byte-for-byte copy of Thursday results snapshot; no new data request or row changes.",
+  "original_capture_receipts": [
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2019/results/?limit=100&offset=0",
+      "retrieved_at_utc": "2026-09-10T01:04:15.336500+00:00",
+      "sha256": "074cd909c013d4cbff158ebf3bd929c6cf562fcff90ce9624e31410893a7488d",
+      "raw_file": "2019_results_0000.json",
+      "total": 420,
+      "limit": 100,
+      "offset": 0
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2019/results/?limit=100&offset=100",
+      "retrieved_at_utc": "2026-09-10T01:04:16.959064+00:00",
+      "sha256": "46ec23a766147340a7c778561dca4eff34734ba66ea2110138b59a20b58bdf83",
+      "raw_file": "2019_results_0100.json",
+      "total": 420,
+      "limit": 100,
+      "offset": 100
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2019/results/?limit=100&offset=200",
+      "retrieved_at_utc": "2026-09-10T01:04:18.549613+00:00",
+      "sha256": "74400415e5be9a88ba34eb04350cb2eb8b1e14c377982ea9589a185cc45f1204",
+      "raw_file": "2019_results_0200.json",
+      "total": 420,
+      "limit": 100,
+      "offset": 200
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2019/results/?limit=100&offset=300",
+      "retrieved_at_utc": "2026-09-10T01:04:21.272660+00:00",
+      "sha256": "c23b2f6a55a65e8e3464cde7627649219388ef8f3de4eb68506c0781f28fb448",
+      "raw_file": "2019_results_0300.json",
+      "total": 420,
+      "limit": 100,
+      "offset": 300
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2019/results/?limit=100&offset=400",
+      "retrieved_at_utc": "2026-09-10T01:04:22.911058+00:00",
+      "sha256": "6a96a409d23e34c75d5edf9701278d90243c1fd238b19f2ab0a84e81bbafde7e",
+      "raw_file": "2019_results_0400.json",
+      "total": 420,
+      "limit": 100,
+      "offset": 400
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2020/results/?limit=100&offset=0",
+      "retrieved_at_utc": "2026-09-10T01:04:24.510915+00:00",
+      "sha256": "95003635400e42a2b4cf11e409ee605098c901a5213ff281254da96b9669cf86",
+      "raw_file": "2020_results_0000.json",
+      "total": 340,
+      "limit": 100,
+      "offset": 0
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2020/results/?limit=100&offset=100",
+      "retrieved_at_utc": "2026-09-10T01:04:26.105590+00:00",
+      "sha256": "ffc268e6506e520273e2621753af2f4f4dd5c6cf5af9551e6965c042047584b3",
+      "raw_file": "2020_results_0100.json",
+      "total": 340,
+      "limit": 100,
+      "offset": 100
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2020/results/?limit=100&offset=200",
+      "retrieved_at_utc": "2026-09-10T01:04:27.758671+00:00",
+      "sha256": "1be35e1f70b6971bf02354c09c89379a5c91115be6c552633c13410d7b2f02ae",
+      "raw_file": "2020_results_0200.json",
+      "total": 340,
+      "limit": 100,
+      "offset": 200
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2020/results/?limit=100&offset=300",
+      "retrieved_at_utc": "2026-09-10T01:04:30.513626+00:00",
+      "sha256": "2fd7648d44edce0daa53284e1553155a84703c5f63c9f824d920f0ccdb786235",
+      "raw_file": "2020_results_0300.json",
+      "total": 340,
+      "limit": 100,
+      "offset": 300
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2021/results/?limit=100&offset=0",
+      "retrieved_at_utc": "2026-09-10T01:04:32.174632+00:00",
+      "sha256": "b3eef4b494be3882c71df362d6253ca3b668a8f661f02115a91f179645bd7658",
+      "raw_file": "2021_results_0000.json",
+      "total": 440,
+      "limit": 100,
+      "offset": 0
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2021/results/?limit=100&offset=100",
+      "retrieved_at_utc": "2026-09-10T01:04:33.792262+00:00",
+      "sha256": "e562aaffd2249481485a374242d3f953b6bfc2201c2aa9fa9528dab6f399b702",
+      "raw_file": "2021_results_0100.json",
+      "total": 440,
+      "limit": 100,
+      "offset": 100
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2021/results/?limit=100&offset=200",
+      "retrieved_at_utc": "2026-09-10T01:04:35.487889+00:00",
+      "sha256": "14b8a5a9cc0ce853e86b0bfad50de743b42d1706de9d4bcc68a27f37e8ac7f3a",
+      "raw_file": "2021_results_0200.json",
+      "total": 440,
+      "limit": 100,
+      "offset": 200
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2021/results/?limit=100&offset=300",
+      "retrieved_at_utc": "2026-09-10T01:04:37.500084+00:00",
+      "sha256": "bb43b9a8c022b06ad31be2e753cbc889f213504fa791aa85f7c076df8fed7af1",
+      "raw_file": "2021_results_0300.json",
+      "total": 440,
+      "limit": 100,
+      "offset": 300
+    },
+    {
+      "url": "https://api.jolpi.ca/ergast/f1/2021/results/?limit=100&offset=400",
+      "retrieved_at_utc": "2026-09-10T01:04:39.077414+00:00",
+      "sha256": "f622899170629f1fe4075d3e296c876dab6c2563641fedc350fc02eeea849a16",
+      "raw_file": "2021_results_0400.json",
+      "total": 440,
+      "limit": 100,
+      "offset": 400
+    }
+  ],
+  "source_manifest_sha256": "b096c5052961a63f231f1e8f7a56a715aa1668129f200772ac95da048cffa99a",
+  "measure": "Driver race-result points; excludes separate Sprint result points. Not official cumulative constructor standings."
+}

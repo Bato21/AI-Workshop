@@ -1,0 +1,27 @@
+{
+  "horizon": "New Ferrari and McLaren team points in Italy + Spain 2026; not cumulative championship standings",
+  "sign_convention": "Ferrari minus McLaren; positive Ferrari, negative McLaren",
+  "initial_prediction_date": "2026-09-03",
+  "update_class_date": "2026-09-10",
+  "observed_event": "Italy",
+  "unresolved_event": "Spain (Madrid), 2026-09-13",
+  "class_report": {
+    "source": "Instructor report in this task",
+    "predictions_count": 10,
+    "Ferrari_votes": 9,
+    "McLaren_votes": 1,
+    "confirmed_mclaren_predicted_total_gap_F_minus_M": -9,
+    "individual_confidences": null,
+    "other_individual_margins": "Not transcribed: unconfirmed photograph values"
+  },
+  "sources": {
+    "italy_results": "https://www.formula1.com/en/results/2026/races/1293/italy/race-result",
+    "mclaren_crosscheck": "https://www.mclaren.com/racing/formula-1/2026/italian-grand-prix/race-report/",
+    "spain_schedule": "https://www.formula1.com/en/racing/2026/spain",
+    "original_card": "IIT414W_W01_PredictionCard_v3.docx; 3 Sep 2026",
+    "shared_chart": "w01_shared_evidence_2026_v1.json copied without numerical changes from W01"
+  },
+  "as_of_utc": "2026-09-10T01:18:29.570992+00:00",
+  "no_future_results": true,
+  "scope_note": "The 2026 forecast case is separate from historical development EDA. Frozen packet, no network refresh."
+}

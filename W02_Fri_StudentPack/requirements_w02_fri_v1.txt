@@ -1,0 +1,6 @@
+# Same tested core environment as Thursday; no API dependencies needed.
+numpy==1.26.4
+pandas==2.3.1
+matplotlib==3.10.3
+ipykernel==6.30.0
+notebook>=7,<8

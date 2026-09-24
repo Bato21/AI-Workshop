@@ -1,0 +1,26 @@
+{
+  "created_at_utc": "2026-09-11T15:09:04.916017+00:00",
+  "seed": 414,
+  "historical_provenance": "PROVIDED_REAL_SNAPSHOT: Jolpica 2019-2021, no current API request",
+  "forecast_provenance": "Official F1 Italy 2026 table, instructor-transcribed snapshot; not synthetic",
+  "python": "3.10.4",
+  "pandas": "2.2.3",
+  "numpy": "1.26.4",
+  "source_manifest_sha256": "b096c5052961a63f231f1e8f7a56a715aa1668129f200772ac95da048cffa99a",
+  "note": "Files and computations are evidence of execution, not a grade or proof of understanding.",
+  "files": {
+    "arithmetic_scenarios.csv": "e1ec5492cfa19373d6d92c515f61dae3e4d141f9eb80772f62697664038e7f7b",
+    "band_summary.csv": "bafe88ab209c112cc3ea5e51ce598c5d9f9101903b41bd2b360bf4b27055183e",
+    "feature_audit.csv": "248a8d18166cc6d4246c4e4a508b06f831c65cda481501781abc2539d48070c4",
+    "feature_decisions.csv": "87480b4298d88c57986a555b36dc35e9346cd01c6ff5a7deb3b3494283ccab6c",
+    "italy_points.png": "2b787d2feb58f3621b2dabe244f440047f95d28cf46cbd04d71341ac1a6f6398",
+    "join_coverage.csv": "a7e2fd8aa92d035f3a779881be2d5d14ef0cac8a7c389d9096eb280447b73116",
+    "prediction_and_decisions.json": "4f346dfa6c218163c326b528286909e51a7f3e2ebe5e391886afc894c2793e2a",
+    "q3_coverage.csv": "8cf3e8f8658f2d3455e952a41c09fafc23e6e95626a52dc0de4a2f4c81ee5ffb",
+    "q3_coverage.png": "db7932be7655a449ef8ffe074d4ba9cba096f820efd5ec7fb90b75991086f53f",
+    "season_summary.csv": "b80fb3fa98cc46e4abc444a564d3ca1656183d5e1c994071a2674ec0f4857628",
+    "selection_comparison.csv": "3144cd2dc523345056d8203491bfb38f28433f75f44acc174a85ef0a7c3604ff",
+    "student_season_comparison.png": "a0d61ca22317d4f8724e8b83aa4d66db646f28f1256013ccfb94fdc741a838b9",
+    "top10_by_band.png": "b9d22125694e1f0fedc231042a5dba41e60edaa3afa4713a1ee55b48cf23493c"
+  }
+}

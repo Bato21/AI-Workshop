@@ -1,0 +1,137 @@
+{
+  "sources": {
+    "ferrari": "https://www.formula1.com/en/results/2026/team/Ferrari",
+    "mclaren": "https://www.formula1.com/en/results/2026/team/McLaren-Mercedes",
+    "sprint": "https://www.formula1.com/en/latest/article/formula-1-and-fia-announce-2026-sprint-calendar.3PyLPAazrBNe8kQIS3wOfY",
+    "accessed": "2026-09-02",
+    "measure": "Team points earned per race weekend, including Sprint points where applicable; not cumulative."
+  },
+  "totals": {
+    "ferrari": 338,
+    "mclaren": 263
+  },
+  "rows": [
+    {
+      "round": 1,
+      "event": "Australia",
+      "label": [
+        "Australia"
+      ],
+      "sprint": false,
+      "ferrari": 27,
+      "mclaren": 10
+    },
+    {
+      "round": 2,
+      "event": "China",
+      "label": [
+        "China*"
+      ],
+      "sprint": true,
+      "ferrari": 40,
+      "mclaren": 8
+    },
+    {
+      "round": 3,
+      "event": "Japan",
+      "label": [
+        "Japan"
+      ],
+      "sprint": false,
+      "ferrari": 23,
+      "mclaren": 28
+    },
+    {
+      "round": 4,
+      "event": "Miami",
+      "label": [
+        "Miami*"
+      ],
+      "sprint": true,
+      "ferrari": 20,
+      "mclaren": 48
+    },
+    {
+      "round": 5,
+      "event": "Canada",
+      "label": [
+        "Canada*"
+      ],
+      "sprint": true,
+      "ferrari": 37,
+      "mclaren": 12
+    },
+    {
+      "round": 6,
+      "event": "Monaco",
+      "label": [
+        "Monaco"
+      ],
+      "sprint": false,
+      "ferrari": 18,
+      "mclaren": 10
+    },
+    {
+      "round": 7,
+      "event": "Barcelona-Catalunya",
+      "label": [
+        "Barcelona–",
+        "Catalunya"
+      ],
+      "sprint": false,
+      "ferrari": 25,
+      "mclaren": 25
+    },
+    {
+      "round": 8,
+      "event": "Austria",
+      "label": [
+        "Austria"
+      ],
+      "sprint": false,
+      "ferrari": 14,
+      "mclaren": 18
+    },
+    {
+      "round": 9,
+      "event": "Great Britain",
+      "label": [
+        "Great",
+        "Britain*"
+      ],
+      "sprint": true,
+      "ferrari": 51,
+      "mclaren": 20
+    },
+    {
+      "round": 10,
+      "event": "Belgium",
+      "label": [
+        "Belgium"
+      ],
+      "sprint": false,
+      "ferrari": 30,
+      "mclaren": 16
+    },
+    {
+      "round": 11,
+      "event": "Hungary",
+      "label": [
+        "Hungary"
+      ],
+      "sprint": false,
+      "ferrari": 22,
+      "mclaren": 25
+    },
+    {
+      "round": 12,
+      "event": "Netherlands",
+      "label": [
+        "Netherlands*"
+      ],
+      "sprint": true,
+      "ferrari": 31,
+      "mclaren": 43
+    }
+  ]
+}

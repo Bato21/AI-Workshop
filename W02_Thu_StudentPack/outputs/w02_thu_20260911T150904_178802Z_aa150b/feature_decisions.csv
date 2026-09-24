@@ -1,0 +1,7 @@
+field,available_at_prediction_time,role_and_reason,missing_value_decision
+qualifying_position,"Just after qualifying, before the race","When qualifying ends, this variable shows where the driver's starting in case there's no penalties",The driver did not participate in qualifiying or was disqualified
+q3_seconds,After Q3,"The lap time achieved during Q3, measured in real time in case there're no penalties",The driver did not complete Q3 or didn't make it to Q3
+grid,Just before the race,"The starting position for the race, after the FIA rules the penalties",The driver was penalized and did not start the race or started from the pit lane
+position,Just after the race,"The finishing position of the race, after the FIA rules the penalties","The driver did not finish the race, either DNF or disqualified"
+points,Just after the race,"The points earned in the race, after the FIA rules the penalties",The driver did not finish in the top 10 or was DNF
+status,Just after the race,"The status of the driver at the end of the race, after the FIA rules the penalties","The driver was not eligible for the race, either due to a penalty or a technical issue"

@@ -1,0 +1,5 @@
+season,event,race_date,driver_id,driver_name,constructor_id,classification,laps,status,points
+2026,Italy,2026-09-06,norris,Lando Norris,mclaren,4,53,Finished,12
+2026,Italy,2026-09-06,piastri,Oscar Piastri,mclaren,5,53,Finished,10
+2026,Italy,2026-09-06,hamilton,Lewis Hamilton,ferrari,6,53,Finished,8
+2026,Italy,2026-09-06,leclerc,Charles Leclerc,ferrari,NC,1,DNF,0

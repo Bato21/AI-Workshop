@@ -1,0 +1,15 @@
+{
+  "year": 2021,
+  "mode": "snapshot",
+  "seed": 414,
+  "provenance": "PROVIDED_REAL_SNAPSHOT: Jolpica 2019-2021, race-result points only; no live request",
+  "files": {
+    "case1_cumulative.csv": "f2fdce29b85e67b3661e0a04640292f045acfd33ec452eead976060d7657082f",
+    "case2_analyst_selection.csv": "94fffb352ab7f80a408800ebd9b480b6fa93e21cd8245bc117458bf9f0aad2c1",
+    "case3_means.csv": "b59b2a94ec8a7b8393c7ae34de5259c128149e11b962696e5c5c2f8a161fbde9",
+    "responses_and_feedback.json": "ce9db350efc43b8574e778e6c51acbeb76367b6b1e0386b22f8a2985bdb11352",
+    "team_race_points.csv": "367340e57734fb666412f7369163269b25c8e9c16aa026e92c77231f58eebdef"
+  },
+  "note": "Execution and written work are separate evidence. No automatic grade or cognitive-bias diagnosis.",
+  "source_csv_sha256": "7da03caf06da97109acd67eda15bff9105f0fd2f086b03d2ed2227d1f5e7dbbe"
+}
