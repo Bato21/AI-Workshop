@@ -1,0 +1,208 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Week 3 notebook reading copy</title>
+<style>body{font:18px/1.55 Arial,sans-serif;max-width:1000px;margin:32px auto;padding:0 24px;color:#20202b}
+h1,h2{line-height:1.2}table{border-collapse:collapse;width:100%}td,th{border:1px solid #777;padding:8px}
+pre{white-space:pre-wrap;background:#f2f2f5;padding:12px;overflow-wrap:anywhere}code{font-size:.9em}
+@media print{body{font-size:14px;margin:0}}</style><h1>Thursday · F1 forecasts, AI check and temporal validation</h1>
+<p>IIT414W · 24 September 2026 · 12:30–15:00</p>
+<p><strong>Do:</strong> close Italy–Spain; write Form/Content/Utility criteria before auditing a sample AI answer; forecast Azerbaijan and the Bahrain GP in Malaysia separately; then finish the leakage and validation work below. <strong>Why:</strong> evidence and its time of availability determine whether a forecast or test is credible.</p>
+<p><strong>Hand in at 15:00:</strong> the completed <code>IIT414W_W03_Thu_F1_AI_Worksheet_Student_v2.md</code> on paper. A digital accommodation can be shown to the lecturer then. Keep a copy of the new forecasts. Save this notebook for study; it is not a second submission. No grade.</p>
+<p><strong>Route:</strong> 12:35 old records/results → 12:50 AI check and two forecasts → 13:25 leakage → 13:35 break → 13:45 audit → 14:00 validation → 14:45 exit and hand-in.</p>
+<p>Keep the 2022 check and 2023–2024 final test in their original Lab 1 roles. Work through one written step at a time.</p>
+<h2>F1 closure and two new forecasts</h2>
+<p>Use the separate class record for all written answers. <strong>First</strong> copy your 3 and 10 September cards or mark missing values “not recorded”. <strong>Next</strong> calculate the observed Italy–Spain result using the local data below. <strong>Then</strong> write your three AI criteria before looking at the deliberately flawed example. Complete both separate GP rows and retain a copy. Return to this notebook for the validation questions.</p>
+<pre><code>from pathlib import Path
+import pandas as pd
+
+def locate_prediction_data():
+    current = Path.cwd().resolve()
+    for base in (current, *current.parents):
+        candidate = base / &quot;data&quot; / &quot;samples&quot; / &quot;w03_prediction_v1&quot; / &quot;recent_race_points.csv&quot;
+        if candidate.exists():
+            return candidate
+    raise FileNotFoundError(&quot;Keep data/samples/w03_prediction_v1 in the extracted student pack.&quot;)
+
+recent = pd.read_csv(locate_prediction_data())
+by_race = recent.groupby([&quot;event&quot;, &quot;team&quot;], sort=False)[&quot;race_points&quot;].sum().unstack()
+by_race[&quot;gap_F_minus_M&quot;] = by_race[&quot;Ferrari&quot;] - by_race[&quot;McLaren&quot;]
+display(by_race.loc[[&quot;Netherlands&quot;, &quot;Italy&quot;, &quot;Spain&quot;]])
+print(&quot;Italy + Spain gap:&quot;, int(by_race.loc[[&quot;Italy&quot;, &quot;Spain&quot;], &quot;gap_F_minus_M&quot;].sum()))
+</code></pre>
+<p>Write in the forecast sheet: (a) whether each recorded winner was right, (b) absolute margin error only when a numerical margin was actually recorded, and (c) two new forecasts, one for Azerbaijan and one for the Bahrain GP at Sepang. Record each source and its availability date. Freeze both forecasts before discussing later updates.</p>
+<hr />
+<h2>Lab 1: availability, leakage and validation</h2>
+<h2>1 · Prediction moment and data boundary</h2>
+<p>Lab 1 predicted final top-10 classification after qualifying and before the race. Write one feature known at that moment and one outcome that did not yet exist. Your submitted Lab 1 remains unchanged.</p>
+<p><strong>Known before the race:</strong></p>
+<p><strong>Known only afterward:</strong></p>
+<p><strong>One decision I froze before opening test:</strong></p>
+<pre><code>from pathlib import Path
+import pandas as pd
+
+def locate_week3_data():
+    current = Path.cwd().resolve()
+    for base in (current, *current.parents):
+        candidate = base / &quot;data&quot; / &quot;samples&quot; / &quot;w03_v1&quot;
+        if (candidate / &quot;train_results_v1.csv&quot;).exists():
+            return candidate
+        candidate = base / &quot;w03_v1&quot;
+        if (candidate / &quot;train_results_v1.csv&quot;).exists():
+            return candidate
+    raise FileNotFoundError(&quot;Keep w03_v1/ beside this notebook or inside data/samples/.&quot;)
+
+DATA_DIR = locate_week3_data()
+print(&quot;Local data:&quot;, DATA_DIR)</code></pre>
+<pre><code>results = pd.read_csv(DATA_DIR / &quot;train_results_v1.csv&quot;)
+qualifying = pd.read_csv(DATA_DIR / &quot;train_qualifying_v1.csv&quot;)
+KEY = [&quot;season&quot;, &quot;round&quot;, &quot;driver_id&quot;]
+print(&quot;Result rows:&quot;, len(results), &quot;Qualifying rows:&quot;, len(qualifying))
+print(&quot;Seasons:&quot;, sorted(results[&quot;season&quot;].unique().tolist()))
+print(&quot;Duplicate result keys:&quot;, results.duplicated(KEY).sum())
+print(&quot;Duplicate qualifying keys:&quot;, qualifying.duplicated(KEY).sum())
+print(&quot;Result rows:&quot;, len(results))
+display(results.tail())
+print(&quot;Qualifying rows:&quot;, len(qualifying))
+display(qualifying.tail())</code></pre>
+<p>A result row is one driver in one race. The result table contains post-race fields because it is a historical source. Their presence in a file does not make them valid pre-race predictors.</p>
+<pre><code># Combine race results with qualifying data using the shared identifying columns.
+# A left join keeps every row from the results table, even if qualifying data is missing.
+# validate=&quot;one_to_one&quot; checks that each result key matches at most one qualifying row.
+# indicator=True adds &quot;_merge&quot; to show whether each row matched successfully.
+merged = results.merge(
+    qualifying[KEY + [&quot;qualifying_position&quot;]], on=KEY,
+    how=&quot;left&quot;, validate=&quot;one_to_one&quot;, indicator=True
+)
+
+# Count how many rows matched and how many lacked a qualifying record.
+print(merged[&quot;_merge&quot;].value_counts().to_string())
+
+# Count missing qualifying positions after the merge.
+# Missing values represent unavailable qualifying information, not a known zero.
+print(&quot;Missing qualifying position:&quot;, merged[&quot;qualifying_position&quot;].isna().sum())
+
+# Summarize result rows and missing qualifying positions for each season.
+# This helps identify whether missingness is concentrated in particular seasons.
+display(merged.groupby(&quot;season&quot;, as_index=False).agg(
+    result_rows=(&quot;driver_id&quot;, &quot;size&quot;),
+    missing_qualifying=(&quot;qualifying_position&quot;, lambda s: int(s.isna().sum()))
+))</code></pre>
+<p><strong>Check:</strong> What would change if the join were <code>inner</code>? Would missing qualifying data become a known zero, or disappear from the evaluated population? Write a one-sentence answer here.</p>
+<h2>2 · Feature availability audit</h2>
+<p>For each candidate feature, write the earliest time it could be known and whether it is valid for this prediction. Explain one answer to a partner before seeing their answer.</p>
+<table>
+<thead>
+<tr>
+<th>Candidate</th>
+<th>Earliest availability</th>
+<th>Use before the race? Why?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>qualifying_position</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>position</code> from this race</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td><code>status</code> from this race</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Driver mean finish computed using all 2019–2024 rows</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Constructor points accumulated before this race, with a documented timestamp</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Record one correction to your initial judgement:</p>
+<h2>3 · Leakage hunt</h2>
+<p>A fictional analyst merges 2019–2024, builds <code>target_top10</code> from final position, creates <code>driver_mean_finish</code> using every season, fits a missing-value imputer on all rows, shuffles rows into train/test, then chooses the best rule by repeatedly checking test accuracy.</p>
+<ol>
+<li>Identify two distinct defects. For each, name the information that crosses the boundary.</li>
+<li>Repair the order of decisions. What must be frozen before opening 2023–2024?</li>
+<li>The analyst drops records without qualifying data. Which population would the reported score then describe?</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>Step</th>
+<th>Boundary crossed</th>
+<th>Repair</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Population after dropping missing qualifying rows:</strong></p>
+<p><strong>Decision to freeze before final test:</strong></p>
+<h2>4 · Validation cuts inside train</h2>
+<p>The lab uses 2019–2021 for development, 2022 for a separate check and 2023–2024 for final test. The table below describes only practice folds within the 2019–2021 development period. It does not turn 2022 or 2023–2024 into tuning folds.</p>
+<pre><code>folds = pd.DataFrame([
+    {&quot;design&quot;: &quot;expanding&quot;, &quot;fold&quot;: 1, &quot;train_years&quot;: &quot;2019&quot;, &quot;validation_years&quot;: &quot;2020&quot;},
+    {&quot;design&quot;: &quot;expanding&quot;, &quot;fold&quot;: 2, &quot;train_years&quot;: &quot;2019–2020&quot;, &quot;validation_years&quot;: &quot;2021&quot;},
+    {&quot;design&quot;: &quot;sliding, fixed one-year history&quot;, &quot;fold&quot;: 1, &quot;train_years&quot;: &quot;2019&quot;, &quot;validation_years&quot;: &quot;2020&quot;},
+    {&quot;design&quot;: &quot;sliding, fixed one-year history&quot;, &quot;fold&quot;: 2, &quot;train_years&quot;: &quot;2020&quot;, &quot;validation_years&quot;: &quot;2021&quot;},
+])
+display(folds)
+print(&quot;Train years available:&quot;, sorted(results[&quot;season&quot;].unique().tolist()))</code></pre>
+<p><strong>Your decision:</strong> What changes between expanding and sliding? Which design would you inspect first if an older season may be less relevant, and why? With only three years of development data, what can these two folds not establish?</p>
+<h2>5 · Gap and purging</h2>
+<p>Consider a different prediction task where each training label summarizes events over several days. A row dated 29 December may use information through 3 January. A validation period starts 1 January. The row's timestamp is before validation, but its information interval overlaps validation.</p>
+<table>
+<thead>
+<tr>
+<th>Row</th>
+<th>Timestamp</th>
+<th>Information interval</th>
+<th>Validation starts</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td>29 Dec</td>
+<td>29 Dec–3 Jan</td>
+<td>1 Jan</td>
+</tr>
+<tr>
+<td>B</td>
+<td>20 Dec</td>
+<td>20–23 Dec</td>
+<td>1 Jan</td>
+</tr>
+</tbody>
+</table>
+<p>Which row needs exclusion or a sufficient gap? Explain the overlap. Would you automatically add the same gap to every F1 dataset? What evidence about the feature/label construction would you need?</p>
+<pre><code>intervals = pd.DataFrame([
+    {&quot;row&quot;: &quot;A&quot;, &quot;start_day&quot;: -3, &quot;end_day&quot;: 2},
+    {&quot;row&quot;: &quot;B&quot;, &quot;start_day&quot;: -12, &quot;end_day&quot;: -9},
+])
+validation_start = 0
+intervals[&quot;overlaps_validation&quot;] = intervals[&quot;end_day&quot;] &gt;= validation_start
+display(intervals)</code></pre>
+<h2>Exit record</h2>
+<p><strong>One leakage defect I can now explain:</strong></p>
+<p><strong>One rule that protects the final test:</strong></p>
+<p><strong>One question for Friday:</strong></p>
+<p>Save this notebook. No separate graded submission is created by today's activity.</p>
+</html>

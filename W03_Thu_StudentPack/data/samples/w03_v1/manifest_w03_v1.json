@@ -1,0 +1,15 @@
+{
+  "purpose": "Week 3 classroom validation examples, train period only",
+  "files": {
+    "train_results_v1.csv": {
+      "sha256": "7da03caf06da97109acd67eda15bff9105f0fd2f086b03d2ed2227d1f5e7dbbe",
+      "bytes": 125171,
+      "source": "lab01_v1/train_results_v1.csv"
+    },
+    "train_qualifying_v1.csv": {
+      "sha256": "b27d7ced6faee350895426c54359e4c80e35f7fc74e6b72f7f5998938eb11b3f",
+      "bytes": 124863,
+      "source": "lab01_v1/train_qualifying_v1.csv"
+    }
+  }
+}

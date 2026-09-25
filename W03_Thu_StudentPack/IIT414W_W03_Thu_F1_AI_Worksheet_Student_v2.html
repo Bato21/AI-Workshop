@@ -1,0 +1,172 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>IIT414W_W03_Thu_F1_AI_Worksheet_Student_v2</title>
+<style>body{font:18px/1.55 Arial,sans-serif;max-width:900px;margin:32px auto;padding:0 24px;color:#20202b}
+h1,h2{line-height:1.2}table{border-collapse:collapse;width:100%}td,th{border:1px solid #777;padding:8px}
+blockquote{border-left:4px solid #e10600;padding-left:16px}@media print{body{font-size:14px;margin:0}}</style><h1>Thursday class record · F1 forecasts and AI check</h1>
+<p>IIT414W · 24 September 2026 · 12:30–15:00 · Formative, no grade</p>
+<p><strong>What you will do:</strong> close your old Italy–Spain prediction; write criteria before reading an AI answer; check that answer against sources; predict the next two GPs separately; then complete the leakage and validation notebook. <strong>Why:</strong> a plausible answer is useful only when its evidence, timing and limits can be checked.</p>
+<p><strong>Hand in:</strong> this completed class record <strong>on paper at 15:00 today</strong>. If you use a digital accommodation, show the completed file to the lecturer at 15:00 instead. Keep a copy or photo of your two new forecasts for a later update. Save the notebook for your own study; it is not a second submission. Short phrases are enough. If an old card is missing, write “not recorded”.</p>
+<p>The target throughout this sheet is <strong>Grand Prix race points only</strong>, excluding sprint points. <code>Gap = Ferrari points − McLaren points</code>: positive favours Ferrari, negative favours McLaren, zero is a tie.</p>
+<h2>Step 1 · Old records and observed result · 12:35–12:50</h2>
+<p>Copy what you actually recorded on 3 September and after Italy on 10 September. Do this before looking at the observed total.</p>
+<table>
+<thead>
+<tr>
+<th>Date of forecast</th>
+<th>Predicted winner for Italy + Spain</th>
+<th style="text-align: right;">Predicted two-GP gap (F−M), if recorded</th>
+<th>Reason available then</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>3 Sep · before Italy</td>
+<td></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+<tr>
+<td>10 Sep · after Italy</td>
+<td></td>
+<td style="text-align: right;"></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Use the local <code>recent_race_points.csv</code> to add both drivers for each team.</p>
+<table>
+<thead>
+<tr>
+<th>GP</th>
+<th style="text-align: right;">Ferrari race points</th>
+<th style="text-align: right;">McLaren race points</th>
+<th style="text-align: right;">Observed gap (F−M)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Italy, 6 Sep</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Spain (Madrid), 13 Sep</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+<tr>
+<td>Both GPs</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+</tr>
+</tbody>
+</table>
+<p>Which recorded winner was correct? <strong><em>_</em></strong><em>  Did your 10 Sep update improve the numerical gap error, if both numbers were recorded? <strong><em>_</em></strong></em></p>
+<p>If a numerical gap was recorded, use <code>absolute error = |predicted gap − observed two-GP gap|</code>. Do not create a missing number. The original class vote was 9 Ferrari and 1 McLaren: this is a count of answers, not a 90% probability.</p>
+<h2>Step 2 · Criteria before the AI answer · 12:50–12:55</h2>
+<p>Write one check in each row. Do not read Step 4 first.</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>This answer is usable only if…</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Form · can I inspect it quickly?</td>
+<td></td>
+</tr>
+<tr>
+<td>Content · are facts and sources right?</td>
+<td></td>
+</tr>
+<tr>
+<td>Utility · can I make each GP decision from it?</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2>Step 3 · A prompt you can actually use · 12:55–13:00</h2>
+<p>Use or adapt this prompt. Fill in the bracketed time. The lecturer will show how to open an AI tool, paste the prompt and inspect its answer. If you have access, you may try it yourself; do not enter private information. You do not need an AI account: everyone audits the same printed example in Step 4. The links are part of the prompt so a tool with browsing can check them; a tool without browsing must say it could not.</p>
+<blockquote>
+<p><strong>Purpose:</strong> Help me examine evidence so <strong>I</strong> can predict Ferrari versus McLaren race points separately for Azerbaijan (26 September) and the Bahrain GP at Sepang, Malaysia (4 October 2026). Do not make my final prediction for me. My decision time is <strong>24 September 2026, [time]</strong>. Count Grand Prix race points only, not sprint points.</p>
+<p><strong>Data already available:</strong> Netherlands (23 August): Ferrari 22, McLaren 33; Italy (6 September): Ferrari 8, McLaren 22; Spain/Madrid (13 September): Ferrari 12, McLaren 19. Leclerc did not finish Italy; Hamilton did not finish Spain. These are observations, not proof of future performance.</p>
+<p><strong>Sources to check if you can open links:</strong> calendar https://www.formula1.com/en/racing/2026 ; Netherlands https://www.formula1.com/en/results/2026/races/1292/netherlands/race-result ; Italy https://www.formula1.com/en/results/2026/races/1293/italy/race-result ; Spain https://www.formula1.com/en/results/2026/races/1294/spain/race-result . If you cannot open a link, say “provided by the student, not independently checked”; do not claim you verified it.</p>
+<p><strong>Tasks:</strong> (1) Check the two GP names, dates and venues against the calendar if possible. (2) For <strong>each GP separately</strong>, identify two relevant signals, the dated observation supporting each, and one reason the signal may not transfer to that circuit. (3) Name one important fact unavailable at this decision time. Distinguish observed facts from assumptions.</p>
+<p><strong>Output:</strong> a table with one row per GP and columns for signals, source/date, limitation and missing information; then at most three sentences on what I should verify next. Cite only pages you actually opened. Do not supply a winner, team-point estimate or combined two-GP total: I will record those myself after reviewing your evidence.</p>
+</blockquote>
+<p>One change I made <strong>before using</strong> the prompt, and why: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong></p>
+<h2>Step 4 · Audit a model answer · 13:00–13:07</h2>
+<p>This is a <strong>deliberately flawed classroom example</strong>, not a source of F1 facts:</p>
+<blockquote>
+<p>“Ferrari will beat McLaren by 15 points across the next two races, Azerbaijan and Singapore. Ferrari is ahead in the team standings, so the result is certain. I included all championship points in the estimate. No sources are needed.”</p>
+</blockquote>
+<p>Mark at least two problems against your <strong>Form / Content / Utility</strong> criteria. Verify the calendar and the meaning of race points with the linked official pages or the local README. Write a corrected, limited claim; do not merely replace the wrong race name.</p>
+<table>
+<thead>
+<tr>
+<th>Criterion</th>
+<th>Where the answer fails</th>
+<th>Evidence or check</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Corrected claim: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>__</p>
+<p>One change I would make to the prompt <strong>after reviewing an answer</strong>, and why: <strong><em>_</em></strong><strong><em>_</em></strong>__</p>
+<h2>Step 5 · Two forecasts, not one total · 13:07–13:25</h2>
+<p>Use at least two distinct signals available at your decision time. The local table contains recent race points and non-finishes; official links can provide more context if you have internet. A non-finish is relevant but does not prove the next car will retire. Keep today's forecasts frozen even if later evidence changes your mind.</p>
+<table>
+<thead>
+<tr>
+<th>GP; forecast time</th>
+<th style="text-align: right;">Ferrari race points</th>
+<th style="text-align: right;">McLaren race points</th>
+<th>Gap (F−M) and winner</th>
+<th>Plausible gap range</th>
+<th>Two signals, sources/dates, and one limitation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Azerbaijan · Baku · 26 Sep</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Bahrain GP · Sepang, Malaysia · 4 Oct</td>
+<td style="text-align: right;"></td>
+<td style="text-align: right;"></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>After Baku, a revised Sepang forecast belongs in a <strong>new dated row</strong>. Do not edit today's row. Your partner's strongest question about one signal: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>_</p>
+<h2>Step 6 · Validation exit record · 14:45–15:00</h2>
+<p>Use your notebook work to give three short answers before handing in this record.</p>
+<ol>
+<li>One leakage defect and its repair: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>____</li>
+<li>Two development folds within 2019–2021: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong>____</li>
+<li>Why 2023–2024 must stay out of tuning: <strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong><strong><em>_</em></strong></li>
+</ol>
+<p><strong>Hand-in check at 15:00:</strong> old records or “not recorded” □ · observed total □ · three criteria □ · two AI problems □ · two separate forecasts with sources □ · three validation answers □ · copy/photo retained □</p>
+<p>Sources available as of 23 September: <a href="https://www.formula1.com/en/racing/2026">official calendar</a>, <a href="https://www.formula1.com/en/results/2026/races/1293/italy/race-result">Italy</a>, <a href="https://www.formula1.com/en/results/2026/races/1294/spain/race-result">Spain</a>, <a href="https://www.formula1.com/en/results/2026/races/1292/netherlands/race-result">Netherlands</a>. The local CSV is a small classroom extract; it has no future race results.</p></html>

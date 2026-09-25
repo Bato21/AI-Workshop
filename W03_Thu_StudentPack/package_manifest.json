@@ -1,0 +1,49 @@
+{
+  "package": "IIT414W_W03_Thu_StudentPack_v4.zip",
+  "files": {
+    "IIT414W_W03_Thu_F1_AI_Worksheet_Student_v2.md": {
+      "sha256": "7b518d2a1dc6a462aa79adf7e781adf4955336ff1ceba6be8a069708fe2708a2",
+      "bytes": 7606
+    },
+    "IIT414W_W03_Thu_F1_AI_Worksheet_Student_v2.html": {
+      "sha256": "aeb148eb94a198edcc30520bc9cae533755e614c2558fd287e65c42b855503e3",
+      "bytes": 10848
+    },
+    "unit_I/week_03/W03_Thu_forecasts_leakage_validation_students_v3.ipynb": {
+      "sha256": "e409048b71bd3c9570a45aaed9603ccf53d621e907b49bd922f6902bf60657f9",
+      "bytes": 32272
+    },
+    "W03_Thu_Worksheet_Student_v3.html": {
+      "sha256": "9450a96e951f4f50a9ddaa0e43dddd89e761eff8c41130e325ef72ccbbc5a82b",
+      "bytes": 11653
+    },
+    "data/samples/w03_v1/train_results_v1.csv": {
+      "sha256": "7da03caf06da97109acd67eda15bff9105f0fd2f086b03d2ed2227d1f5e7dbbe",
+      "bytes": 125171
+    },
+    "data/samples/w03_v1/train_qualifying_v1.csv": {
+      "sha256": "b27d7ced6faee350895426c54359e4c80e35f7fc74e6b72f7f5998938eb11b3f",
+      "bytes": 124863
+    },
+    "data/samples/w03_v1/manifest_w03_v1.json": {
+      "sha256": "e3c34e07985f76f199dcedbb625a39a3f3a772e9821bc49b010ea917f49aa77a",
+      "bytes": 497
+    },
+    "data/samples/w03_prediction_v1/recent_race_points.csv": {
+      "sha256": "717b0a5a335f3ec9574689b4d88ec0f21a92eefde385d6f64d87503132d7a0ea",
+      "bytes": 1650
+    },
+    "data/samples/w03_prediction_v1/README.md": {
+      "sha256": "30ae707532522c1ca5e8b866a0797b657f38edae9b6cbd3a37f79f91e8b1d88c",
+      "bytes": 551
+    },
+    "START_HERE_W03_Thu_v4.md": {
+      "sha256": "e547458578b211f6c8f670e398efc827fcc73722282c67eebbf9b971aed7f78e",
+      "bytes": 1910
+    },
+    "START_HERE_W03_Thu_v4.html": {
+      "sha256": "310f5cf9ed9b2b6d684f0f33d49d0ac436f548b574acb0d3a1d0c0524129d54d",
+      "bytes": 2549
+    }
+  }
+}
