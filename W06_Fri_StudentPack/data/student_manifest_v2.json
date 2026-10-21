@@ -1,0 +1,12 @@
+{
+  "source": "Public F1 timing parsed with FastF1 3.5.3; real data",
+  "seed": 414,
+  "selected_on_early_2022": "forest_sqrt",
+  "learning_rows": 72616,
+  "test_history_excluded": true,
+  "reserved_2022_excluded": true,
+  "files": {
+    "external_2026_frozen_v2.csv": "d563dcfddefc0995c6e6a7e66e42b0d5d133f9e95c6b65dd73a8d5e30d23a33e",
+    "learning_v2.csv": "6782cfca5940fbe7683c8b03cdb8e5a9f2990f426dc7b8f3182eec32cd7f0b3f"
+  }
+}

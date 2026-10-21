@@ -1,0 +1,41 @@
+{
+  "package": "IIT414W_W03_Fri_StudentPack_v6.zip",
+  "files": {
+    "unit_I/week_03/W03_Fri_learning_curves_students_v5.ipynb": {
+      "sha256": "bec1e63f33693be5008062b0a4f581c128a4e55525ac466a7c04397c7662c9bb",
+      "bytes": 50904
+    },
+    "W03_Fri_Worksheet_Student_v5.html": {
+      "sha256": "b5b7e8ac8f4bea74060f83ea5726f12bc68a647570687c92c931377914f65322",
+      "bytes": 5418
+    },
+    "START_HERE_W03_Fri_v6.md": {
+      "sha256": "95fa674a02b6d7ba1ea6f76f38f205a168c4456c3e92086a8df5277f23127cdf",
+      "bytes": 2315
+    },
+    "START_HERE_W03_Fri_v6.html": {
+      "sha256": "74126202e43122e675efbfa9f54e6ec6e7e21d01d0f363e11193515cdc039d0b",
+      "bytes": 3016
+    },
+    "IIT414W_W03_Fri_Bridge_AI_Check_Student_v4.md": {
+      "sha256": "d13f2e58b5e8ffe30e86048c67c9c72a43be070c3263c920d1e4a0a9fd4ae98a",
+      "bytes": 3345
+    },
+    "IIT414W_W03_Fri_Bridge_AI_Check_Student_v4.html": {
+      "sha256": "fa3f187ade0933ef485dd52f6c69f18dc61218187aa92d2c913b5a591c48af7b",
+      "bytes": 4126
+    },
+    "IIT414W_W03_Fri_Bridge_AI_Check_Student_v4.pdf": {
+      "sha256": "78feb981158b9211c29898a28bad33096de683811fa081394b73cb1bc706ee32",
+      "bytes": 75929
+    },
+    "IIT414W_W03_Fri_ExitTicket_Student_v4.md": {
+      "sha256": "3b5ced49ea76e597aa9bb15b4a79604a9f20afcc255c8a5eb95cf9de7f9e8f03",
+      "bytes": 896
+    },
+    "IIT414W_W03_Fri_ExitTicket_Student_v4.html": {
+      "sha256": "77c23e1c0148eed86337096d988e42e32f695189ff5dfc1d8e3c8d1f8b3ee111",
+      "bytes": 1208
+    }
+  }
+}

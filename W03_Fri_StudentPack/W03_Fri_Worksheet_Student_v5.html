@@ -1,0 +1,76 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><title>Week 3 notebook reading copy</title>
+<style>body{font:18px/1.55 Arial,sans-serif;max-width:1000px;margin:32px auto;padding:0 24px;color:#20202b}
+h1,h2{line-height:1.2}table{border-collapse:collapse;width:100%}td,th{border:1px solid #777;padding:8px}
+pre{white-space:pre-wrap;background:#f2f2f5;padding:12px;overflow-wrap:anywhere}code{font-size:.9em}
+@media print{body{font-size:14px;margin:0}}</style><h1>Friday · From F1 evidence to learning curves</h1>
+<p>IIT414W · 25 September 2026 · 11:10–13:40</p>
+<p><strong>Do:</strong> use yesterday's F1 result to distinguish observation from a future claim; read two fictional learning curves; check a simulated AI claim; complete the 45-minute individual rehearsal; answer the exit ticket. <strong>Why:</strong> the same evidence rule protects forecasts, model interpretation and your exam answers.</p>
+<p><strong>Hand in:</strong> the Canvas practice quiz by <strong>13:30</strong>; the bridge/AI check on paper and the Canvas exit ticket by <strong>13:40</strong>. A digital accommodation can be shown to the lecturer at the same times. All are ungraded. Save this notebook for study; it is not another submission.</p>
+<p><strong>Route:</strong> 11:10 bridge → 11:20 curves → 12:05 break → 12:15 review → 12:25 AI check → 12:35 rehearsal instructions → 12:45–13:30 individual rehearsal → 13:30 exit.</p>
+<p>The two curves below are fictional teaching values. They do not describe Baku or Sepang and never use Lab 1's 2023–2024 final test. Record your own first interpretation before discussion.</p>
+<h2>First: complete the F1 bridge, 11:10–11:20</h2>
+<p>Open <code>IIT414W_W03_Fri_Bridge_AI_Check_Student_v4.md</code> and complete <strong>Part A only</strong>. The observed Italy–Spain result answers the old question; it does not determine either GP forecast you recorded yesterday. Keep those two forecast rows unchanged. Then return here to read curves A and B.</p>
+<pre><code>import pandas as pd
+import matplotlib.pyplot as plt
+
+curves = pd.DataFrame({
+    &quot;training_rows&quot;: [50, 100, 200, 400, 800],
+    &quot;A_train_accuracy&quot;: [0.61, 0.62, 0.63, 0.64, 0.65],
+    &quot;A_validation_accuracy&quot;: [0.56, 0.58, 0.60, 0.61, 0.62],
+    &quot;B_train_accuracy&quot;: [0.99, 0.98, 0.96, 0.95, 0.94],
+    &quot;B_validation_accuracy&quot;: [0.53, 0.58, 0.62, 0.65, 0.66],
+})
+display(curves)</code></pre>
+<pre><code>fig, axes = plt.subplots(1, 2, figsize=(11, 4), sharey=True)
+for ax, label in zip(axes, [&quot;A&quot;, &quot;B&quot;]):
+    ax.plot(curves.training_rows, curves[f&quot;{label}_train_accuracy&quot;], marker=&quot;o&quot;, label=&quot;Training&quot;)
+    ax.plot(curves.training_rows, curves[f&quot;{label}_validation_accuracy&quot;], marker=&quot;o&quot;, label=&quot;Validation&quot;)
+    ax.set_title(f&quot;Fictional case {label}&quot;)
+    ax.set_xlabel(&quot;Rows used for training&quot;)
+    ax.set_ylabel(&quot;Accuracy&quot;)
+    ax.set_ylim(0.45, 1.0)
+    ax.grid(alpha=0.25)
+    ax.legend()
+plt.tight_layout()
+plt.show()</code></pre>
+<h2>1 · Read before diagnosing</h2>
+<p>For each chart, identify the x-axis, y-axis, training curve, validation curve and the approximate gap at 800 rows. Compare to a baseline only when one is supplied; these charts do not supply one.</p>
+<table>
+<thead>
+<tr>
+<th>Case</th>
+<th>What I observe</th>
+<th>Plausible hypothesis</th>
+<th>Next check</th>
+<th>What the chart alone cannot prove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>A</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>B</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Write your first judgement before discussion. A large gap may suggest weak generalisation. Similar low scores may suggest insufficient fit. Neither pattern uniquely identifies a cause.</p>
+<pre><code>for label in [&quot;A&quot;, &quot;B&quot;]:
+    gap = curves[f&quot;{label}_train_accuracy&quot;].iloc[-1] - curves[f&quot;{label}_validation_accuracy&quot;].iloc[-1]
+    print(f&quot;Case {label}, last-row train minus validation: {gap:.3f} ({gap*100:.1f} percentage points)&quot;)</code></pre>
+<h2>2 · Revise after a partner's challenge</h2>
+<p><strong>Partner's strongest objection:</strong></p>
+<p><strong>My revised interpretation, or reason to retain it:</strong></p>
+<p><strong>A validation-design question I would ask before changing a model:</strong></p>
+<h2>3 · Individual rehearsal, 12:45–13:30</h2>
+<p>Open <a href="https://udd.instructure.com/courses/81962/quizzes/139668"><strong>Certamen 1 rehearsal · Practice Quiz</strong></a> in the Friday Canvas module only when the lecturer starts the timer. Work alone without AI, notes or other websites; blank calculation paper and an allowed calculator are permitted. If blocked, choose your best answer and continue. <strong>Submit by 13:30.</strong> Canvas shows a diagnostic score and correct answers after submission; this is not a course grade.</p>
+<h2>Exit ticket, 13:30–13:40</h2>
+<p>Open <code>Friday Exit Ticket in Canvas</code>. Write two short answers: your hardest rehearsal block and the step that blocked you; then one action to practise before 1 October. <strong>Submit the exit ticket in Canvas by 13:40; hand in the bridge/AI check on paper.</strong> Save this notebook for study.</p></html>
